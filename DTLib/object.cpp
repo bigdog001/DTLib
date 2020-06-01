@@ -5,7 +5,7 @@
 using namespace std;
 namespace DTLib {
 
-void *Object::operator new(unsigned int size) throw()
+void *Object::operator new(unsigned long size) throw()
 {
     return malloc(size);
 }
@@ -15,7 +15,7 @@ void Object::operator delete(void *p)
     free(p);
 }
 
-void *Object::operator new[](unsigned int size) throw()
+void *Object::operator new[](unsigned long size) throw()
 {
     return malloc(size);
 }
